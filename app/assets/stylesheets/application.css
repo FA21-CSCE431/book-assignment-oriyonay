@@ -13,3 +13,57 @@
  *= require_tree .
  *= require_self
  */
+
+/* general css things */
+ h1, h2, h3, p {
+   font-family: courier;
+ }
+
+/* cool background things */
+ html, body {
+   width: 100%;
+   height:100%;
+ }
+
+ body {
+     background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+     background-size: 400% 400%;
+     animation: gradient 30s ease infinite;
+ }
+
+ td {
+    padding: 0 15px;
+  }
+
+ @keyframes gradient {
+     0% {
+         background-position: 0% 50%;
+     }
+     50% {
+         background-position: 100% 50%;
+     }
+     100% {
+         background-position: 0% 50%;
+     }
+ }
+
+/* cool button things */
+a.button1:hover {
+    color: #000000;
+    background-color: #23d5ab;
+}
+
+a.button1 {
+    display: inline-block;
+    padding: 0.35em 1.2em;
+    border: 0.1em solid #000000;
+    margin: 0 0.3em 0.3em 0;
+    border-radius: 0.12em;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: Courier, 'Roboto',sans-serif;
+    font-weight: 300;
+    color: #000000;
+    text-align: center;
+    transition: all 0.2s;
+}

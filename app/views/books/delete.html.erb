@@ -1,0 +1,29 @@
+<%= link_to('<< back to main list', books_path, :class => 'back-link', class: 'button1') %>
+<center>
+
+<h1>delete book</h1>
+
+<%= form_for(@book, :method => 'delete') do |f| %>
+<p>are you sure you want to delete the following book?</p>
+<table summary='book detail view'>
+  <tr>
+    <th>title</th>
+    <td><%= @book.title %></td>
+  </tr>
+  <tr>
+    <th>author</th>
+    <td><%= @book.author %></td>
+  </tr>
+  <tr>
+    <th>price</th>
+    <td><%= sprintf('$%.2f', @book.price) %></td>
+  </tr>
+  <tr>
+    <th>date published</th>
+    <td><%= @book.published_date %></td>
+  </tr>
+</table>
+
+<%= f.submit('delete book') %>
+<% end %>
+</center>

@@ -1,0 +1,14 @@
+<%= link_to('<< back to main list', books_path, :class => 'back-link', class: 'button1') %>
+
+<center>
+<h1>edit book</h1>
+<% if @error %>
+<p><b>there was an error updating the book. please try again.</b></p>
+<% end %>
+
+<%= form_for(@book) do |f| %>
+<%= render(:partial => 'form', :locals => {:f => f}) %>
+
+<%= f.submit('update book') %>
+<% end %>
+</center>

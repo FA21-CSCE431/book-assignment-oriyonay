@@ -1,0 +1,14 @@
+<%= link_to('<< back to main list', books_path, :class => 'back-link', class: 'button1') %>
+<center>
+
+<h1>add book</h1>
+<% if @error %>
+<p><b><%= @error %></b></p>
+<% end %>
+
+<%= form_for(@book) do |f| %>
+<%= render(:partial => 'form', :locals => {:f => f}) %>
+
+<%= f.submit('add book') %>
+<% end %>
+</center>
